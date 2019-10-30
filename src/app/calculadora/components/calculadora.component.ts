@@ -24,9 +24,9 @@ export class CalculadoraComponent implements OnInit {
    * 
    * @return void
    */
-  clean() {
+  clean(): void {
     this.number1 = '0';
-    this.number1 = null;
+    this.number2 = null;
     this.result = null;
     this.operation = null;
   }
@@ -38,7 +38,12 @@ export class CalculadoraComponent implements OnInit {
    * @return void
    */
   addNumber(number: string): void{
-    this.operation === null  ? this.number1 = this.concatenateNumber(this.number1, number) : this.number2 = this.concatenateNumber(this.number2, number);
+    if(this.operation === null) {
+      this.number1 = this.concatenateNumber(this.number1, number)
+    }
+    else {
+      this.number2 = this.concatenateNumber(this.number2, number);
+    }
   }
 
   /**
@@ -50,7 +55,7 @@ export class CalculadoraComponent implements OnInit {
    */
   concatenateNumber( currentNumber: string, concatenatedNumber: string ): string {
     // if contains 0 or null, reboot the value 
-    if ( currentNumber === '0' || currentNumber === 'null' )
+    if ( currentNumber === '0' || currentNumber === null )
       currentNumber = '';
 
     // if first digit is '.' concatenate before dot
@@ -97,9 +102,14 @@ export class CalculadoraComponent implements OnInit {
    * @return void
    */
   calculate(): void {
-    this.number2 === null ? null : this.result = this.calculadoraService.calcular(parseFloat(this.number1),
-                                                                                    parseFloat(this.number2),
-                                                                                    this.operation);
+    if ( this.number2 === null ) {
+      return;
+    }
+    this.result = this.calculadoraService.calcular(
+      parseFloat(this.number1),
+      parseFloat(this.number2),
+      this.operation);
+  
   }
 
   /**
