@@ -1,5 +1,11 @@
 # Calculator
 
+This project porpuse is to learn Agngular8 so I can improve on new technologies and be capable to apply new knowledge on the workplace. 
+
+Fell free to contact me or anything
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.15.
 
 ## Development server
