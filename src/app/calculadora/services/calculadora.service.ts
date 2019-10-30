@@ -54,6 +54,8 @@ export class CalculadoraService {
         default: 
           result = 0;
       }
+
+      return result;
    }
 
 }
