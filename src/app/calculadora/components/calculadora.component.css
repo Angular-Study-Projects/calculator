@@ -13,3 +13,6 @@
 .col-xs-3, .col-xs-9 {
 	padding: 0px;
 }
+.img-rounded {
+    border-radius: 10px;
+}
