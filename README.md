@@ -2,7 +2,7 @@
 
 This project porpuse is to learn Agngular8 so I can improve on new technologies and be capable to apply new knowledge on the workplace. 
 
-Fell free to contact me or anything
+Feel free to contact me or anything
 
 
 
